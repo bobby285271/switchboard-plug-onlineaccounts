@@ -18,6 +18,7 @@ shared_module(
     gresource,
     plug_files,
     dependencies: [
+        camel_dep,
         glib_dep,
         gobject_dep,
         granite_dep,

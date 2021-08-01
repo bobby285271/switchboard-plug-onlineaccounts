@@ -19,6 +19,9 @@ add_project_arguments(
     language:'c'
 )
 
+add_project_arguments(['--vapidir', join_paths(meson.current_source_dir(), 'vapi')], language: 'vala')
+
+camel_dep = dependency('camel-1.2', version: '>= 3.28')
 ecal_vapi = meson.get_compiler('vala').find_library('libecal-2.0-fixes', dirs: meson.current_source_dir() / 'vapi')
 edataserver_dep = dependency('libedataserver-1.2')
 edataserverui_dep = dependency('libedataserverui-1.2')
